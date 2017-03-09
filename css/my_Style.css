@@ -7,6 +7,16 @@
   font-size: 60px;
 }
 
+#welcome_message{
+  text-align: center;
+  text-shadow: 3px 3px 3px black;
+  color: lightgrey;
+  margin-top: 50px;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-size: 50px;
+}
+
+
 #board{
   background-color: #ffe4e1;
   text-align: center;
