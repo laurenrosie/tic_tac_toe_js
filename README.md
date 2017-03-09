@@ -11,3 +11,11 @@ The rules of tic-tac-toe are as follows:
 - A player wins if they claim all the fields in a row, column or diagonal
 - A game is over if a player wins
 - A game is over when all fields are taken
+
+## Example Board
+
+
+|  x |   |  **o** |
+|---|---|---|
+|   | **o**  |  **x** |
+|  **x** |   | **o**  ||
