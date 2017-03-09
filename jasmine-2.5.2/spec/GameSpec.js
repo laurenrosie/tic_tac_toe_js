@@ -4,7 +4,6 @@ describe('Game', function(){
   });
 
   it('has an attribute Player 1 which is an instance of Player', function(){
-    console.log(game.player1)
     expect(game.player1() instanceof Player).toBeTruthy()
   });
 
