@@ -1,10 +1,10 @@
 #heading {
   text-align: center;
-  text-shadow: 3px 3px black;
+  text-shadow: 3px 3px 3px black;
   color: #ffe4e1;
   margin-top: 50px;
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-  font-size: 60px
+  font-size: 60px;
 }
 
 #board{
@@ -30,7 +30,7 @@ button {
   font-family: "Arial Black", "Arial", Gadget, sans-serif;
   font-size: 10px;
   text-align: center;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 5px 7px 5px #888888;
 }
 
 #name_form{
@@ -47,5 +47,8 @@ button {
 #player-submit{
   box-shadow: 5px 5px 5px #888888;
   font-family: "Arial Black", "Arial", Gadget, sans-serif;
-  font-size: 20px;
+  font-size: 14px;
+  width: 100px;
+  height: 30px;
+  background-color: #ffe4e1;
 }
