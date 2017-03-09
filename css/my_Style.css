@@ -31,5 +31,21 @@ button {
   font-size: 10px;
   text-align: center;
   box-shadow: 10px 10px 5px #888888;
+}
 
+#name_form{
+  text-align: center;
+}
+
+#player-input{
+  box-shadow: 5px 5px 5px #888888;
+  font-family: "Arial Black", "Arial", Gadget, sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+#player-submit{
+  box-shadow: 5px 5px 5px #888888;
+  font-family: "Arial Black", "Arial", Gadget, sans-serif;
+  font-size: 20px;
 }
