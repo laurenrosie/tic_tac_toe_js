@@ -12,7 +12,7 @@ describe('Board', function(){
     expect(board.squares()[0].length).toEqual(3)
   });
 
-  it('has individual array elements which are squares', function(){
-    expect(board.squares()[0][0] instanceof Square).toBeTruthy()
+  it('has individual array elements which are empty strings', function(){
+    expect(board.squares()[0][0]).toEqual("")
   });
 });

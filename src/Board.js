@@ -1,7 +1,7 @@
 function Board(){
-  this._squares = [[new Square(),new Square(),new Square()],
-                    [new Square(),new Square(),new Square()],
-                    [new Square(),new Square(),new Square()]];
+  this._squares = [["","",""],
+                    ["","",""],
+                    ["","",""]];
 };
 
 Board.prototype.squares = function () {
