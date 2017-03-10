@@ -30,5 +30,4 @@ describe('Game', function(){
     expect(game.board().squares()[1][0]).toEqual(game.player1())
   });
 
-
 });

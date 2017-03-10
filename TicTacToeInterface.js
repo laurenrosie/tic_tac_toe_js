@@ -33,6 +33,4 @@ $( document ).ready(function() {
     current_player = game.otherPlayer(current_player)
   });
 
-
-
 });
