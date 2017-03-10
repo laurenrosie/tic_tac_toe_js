@@ -28,3 +28,12 @@ Game.prototype.setPlayer2Name = function (newName) {
 Game.prototype.setSquare = function (i, j, player) {
   this._board.squares()[i][j]=player;
 };
+
+Game.prototype.otherPlayer = function (player) {
+   if(player == this._player1){
+     return this._player2
+   }else{
+     return this._player1
+   }
+
+};

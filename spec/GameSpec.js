@@ -30,4 +30,12 @@ describe('Game', function(){
     expect(game.board().squares()[1][0]).toEqual(game.player1())
   });
 
+  it('has a method #otherplayer returning the other player', function(){
+    expect(game.otherPlayer(game.player1())).toEqual(game.player2())
+  })
+
+  it('has a method #otherplayer returning the other player', function(){
+    expect(game.otherPlayer(game.player2())).toEqual(game.player1())
+  })
+
 });
