@@ -67,3 +67,10 @@ button {
   height: 30px;
   background-color: #ffe4e1;
 }
+
+.value{
+  font-family: "Arial Black", "Arial", Gadget, sans-serif;
+  font-size: 60px;
+  color: grey;
+  font-weight: bold;
+}
