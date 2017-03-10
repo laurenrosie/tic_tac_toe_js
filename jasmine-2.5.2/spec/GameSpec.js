@@ -13,22 +13,11 @@ describe('Game', function(){
 
   it('has an attribute Board which is an instance of Board', function(){
     expect(game.board() instanceof Board).toBeTruthy()
-  })
-
-  it('has method #setPlayer1Name which changes player1 name', function(){
-    game.setPlayer1Name("Lola")
-    expect(game.player1().name).toEqual("Lola")
-  })
-
-  it('has method #setPlayer2Name which changes player2 name', function(){
-    game.setPlayer2Name("Joe")
-    expect(game.player2().name).toEqual("Joe")
-  })
-
-  it('has method setSquare that sets square to a player', function(){
-    game.setSquare(1, 0, game.player1())
-    expect(game.board().squares()[1][0]).toEqual(game.player1())
   });
 
-
+  it('player1_name= successfully changes the name', function(){
+      console.log("gets here")
+      game.set_player1_name("Lola");
+      expect(game.player1().name).toEqual("Lola");
+  });
 });

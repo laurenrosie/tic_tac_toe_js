@@ -2,18 +2,23 @@
   text-align: center;
   text-shadow: 3px 3px 3px black;
   color: #ffe4e1;
-  margin-top: 50px;
+  margin-top: 30px;
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-size: 60px;
 }
 
-#welcome_message{
+#welcome_message, #player_1_message, #player_2_message{
   text-align: center;
   text-shadow: 3px 3px 3px black;
   color: lightgrey;
   margin-top: 50px;
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-  font-size: 50px;
+  font-size: 40px;
+}
+
+#player_1_message, #player_2_message{
+  color: darkgrey;
+  font-size: 30px;
 }
 
 
