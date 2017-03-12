@@ -18,22 +18,9 @@ $( document ).ready(function() {
 
   $("button").click(function(){
     var id = $(this).attr("data-id")
-    var row = id.split("")[0]
-    var column = id.split("")[1]
-    game.setSquare(row,column,current_player)
-    var getValue = "#value"+id
-    var getID = "#"+id
-    $(getValue).text(current_player.marker())
-    $(getID).hide()
-    $(getValue).show()
-    current_player = game.otherPlayer(current_player)
-    if(game.isOver()){
-      $('#board').hide()
-      $('#player_1_message').hide();
-      $('#player_2_message').hide();
-      $('#winner_message').text('You won!');
-      $('#winner_message').show();
-    }
+    fillInSquare(id)
+    switchCurrentPlayer()
+    if(game.isOver()){ finalGameView()}
   });
 
   function initialPageView(){
@@ -63,6 +50,25 @@ $( document ).ready(function() {
   function playPageView(){
     $('#welcome_message').show();
     $('#player_1_message').show();
+  }
+
+  function fillInSquare(id){
+    game.setSquare(id.split("")[0],id.split("")[1],current_player)
+    $("#"+id).hide()
+    $("#value"+id).text(current_player.marker())
+    $("#value"+id).show()
+  }
+
+  function switchCurrentPlayer(){
+    current_player = game.otherPlayer(current_player)
+  }
+
+  function finalGameView(){
+    $('#board').hide()
+    $('#player_1_message').hide();
+    $('#player_2_message').hide();
+    $('#winner_message').text('You won!');
+    $('#winner_message').show();
   }
 
 });
