@@ -74,3 +74,10 @@ button {
   color: grey;
   font-weight: bold;
 }
+
+#winner_message{
+  text-align: center;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-size: 60px;
+  text-shadow: 3px 3px 3px black;
+}

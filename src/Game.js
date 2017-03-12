@@ -47,5 +47,4 @@ Game.prototype.isOver = function () {
     })
   })
   return isOver
-
 };

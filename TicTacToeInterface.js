@@ -5,16 +5,18 @@ $( document ).ready(function() {
 
   $("#player-submit").click(function(){
     event.preventDefault();
+
+    $('#name_form').hide()
+    $('#player_2_message').hide()
+    $('#player_1_message').hide()
+    $('winner_message').hide()
+
     names_array =  $('#name_form').serializeArray()
     player1_name = names_array[0]['value']
     player2_name = names_array[1]['value']
     game.setPlayer1Name(player1_name)
     game.setPlayer2Name(player2_name)
     current_player = game.player1()
-    $('#name_form').hide()
-    $('#player_2_message').hide()
-    $('#player_1_message').hide()
-
     message = player1_name + " vs " + player2_name
 
     $('#welcome_message').text(message);
@@ -22,6 +24,8 @@ $( document ).ready(function() {
 
     player_message = player1_name + " it's your turn, choose a square!"
     $('#player_1_message').text(player_message);
+    player_2_message = player2_name + " it's your turn, choose a square!"
+    $('#player_2_message').text(player_2_message);
     $('#player_1_message').show();
   });
 
@@ -36,8 +40,13 @@ $( document ).ready(function() {
     $(getID).hide()
     $(getValue).show()
     current_player = game.otherPlayer(current_player)
-    // check is game over now?
-    // if it is announce winner
+    if(game.isOver()){
+      $('#board').hide()
+      $('#player_1_message').hide();
+      $('#player_2_message').hide();
+      $('#winner_message').text('You won!');
+      $('#winner_message').show();
+    }
   });
 
 });
