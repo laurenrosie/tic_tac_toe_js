@@ -25,7 +25,8 @@ $( document ).ready(function() {
     $('#player_1_message').show();
   });
 
-  $("button#00").click(function(){
+  $("button").click(function(){
+    console.log($(this).attr("data-id"))
     game.setSquare(0,0,current_player)
     $('#value00').text(current_player.marker())
     $('#00').hide()
