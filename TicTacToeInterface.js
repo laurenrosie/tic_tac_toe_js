@@ -27,11 +27,9 @@ $( document ).ready(function() {
 
   $("button#00").click(function(){
     game.setSquare(0,0,current_player)
-    console.log(game.board().squares())
     $('#value00').text(current_player.marker())
     $('#00').hide()
     $('#value00').show()
-    current_player = game.otherPlayer(current_player)
     console.log(current_player)
   });
 
