@@ -36,6 +36,8 @@ $( document ).ready(function() {
     $(getID).hide()
     $(getValue).show()
     current_player = game.otherPlayer(current_player)
+    // check is game over now?
+    // if it is announce winner
   });
 
 });

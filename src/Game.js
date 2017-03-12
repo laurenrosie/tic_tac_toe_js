@@ -35,5 +35,17 @@ Game.prototype.otherPlayer = function (player) {
    }else{
      return this._player1
    }
+};
+
+Game.prototype.isOver = function () {
+  var isOver = true;
+  this._board.squares().forEach(function(row){
+    row.forEach(function(value){
+      if(value==""){
+        isOver = false;
+      }
+    })
+  })
+  return isOver
 
 };

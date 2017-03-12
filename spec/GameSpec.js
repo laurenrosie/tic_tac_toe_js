@@ -38,4 +38,18 @@ describe('Game', function(){
     expect(game.otherPlayer(game.player2())).toEqual(game.player1())
   })
 
+  it('has method #isOver returning true if board is full', function(){
+    for(i=0; i<3; i++){
+      for(j=0; j<3; j++){
+        game.setSquare(i,j, "x")
+      }
+    }
+    expect(game.isOver()).toEqual(true)
+  })
+
+  it('has method #isOver returning false if board is not full', function(){
+    game.setSquare(0,0, "x")
+    expect(game.isOver()).toEqual(false)
+  })
+
 });
