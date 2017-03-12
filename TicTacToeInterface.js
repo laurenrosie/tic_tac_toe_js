@@ -35,8 +35,7 @@ $( document ).ready(function() {
     $(getValue).text(current_player.marker())
     $(getID).hide()
     $(getValue).show()
-    player = game.otherPlayer(current_player)
-    current_player = player
+    current_player = game.otherPlayer(current_player)
   });
 
 });
