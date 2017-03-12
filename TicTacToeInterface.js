@@ -26,12 +26,17 @@ $( document ).ready(function() {
   });
 
   $("button").click(function(){
-    console.log($(this).attr("data-id"))
-    game.setSquare(0,0,current_player)
-    $('#value00').text(current_player.marker())
-    $('#00').hide()
-    $('#value00').show()
-    console.log(current_player)
+    var id = $(this).attr("data-id")
+    var row = id.split("")[0]
+    var column = id.split("")[1]
+    game.setSquare(row,column,current_player)
+    var getValue = "#value"+id
+    var getID = "#"+id
+    $(getValue).text(current_player.marker())
+    $(getID).hide()
+    $(getValue).show()
+    player = game.otherPlayer(current_player)
+    current_player = player
   });
 
 });
