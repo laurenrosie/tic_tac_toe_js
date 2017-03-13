@@ -48,3 +48,31 @@ Game.prototype.isOver = function () {
   })
   return isOver
 };
+
+Game.prototype.winner = function () {
+  var row = [[0,0], [0,1], [0,2]]
+  var row1 = [[1,0], [1,1], [1,2]]
+  var row2 = [[2,0], [2,1], [2,2]]
+  var col = [[0,0], [1,0], [2,0]]
+  var col1 = [[0,1], [1,1], [2,1]]
+  var col2 = [[0,2], [1,2], [2,2]]
+  var diag = [[0,0], [1,1], [2,2]]
+  var diag2 = [[0,2], [1,1], [2,0]]
+  var possible = [row, row1, row2, col, col1, col2, diag, diag2]
+  var thisBoard = this
+  possible.forEach(function(option){
+    var chosen = [];
+    option.forEach(function(square){
+      chosen.push(thisBoard._board.squares()[square[0]][square[1]])
+    });
+    console.log(chosen)
+    if(chosen[0]==chosen[1] && chosen[1]==chosen[2]){
+      console.log("gets here")
+      answer = chosen[0]
+      return answer
+    }
+  });
+
+  return "no one"
+
+};

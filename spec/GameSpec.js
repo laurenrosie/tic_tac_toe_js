@@ -52,4 +52,17 @@ describe('Game', function(){
     expect(game.isOver()).toEqual(false)
   })
 
+  it('has method #winner returning the correct winner, or no one', function(){
+    game.setSquare(0,0, "X")
+    game.setSquare(0,1, "X")
+    game.setSquare(0,2, "X")
+    game.setSquare(1,0, "X")
+    game.setSquare(1,1, "O")
+    game.setSquare(1,2, "O")
+    game.setSquare(2,0, "O")
+    game.setSquare(2,1, "O")
+    game.setSquare(2,2, "X")
+    expect(game.winner()).toEqual("X")
+  })
+
 });
